@@ -10,11 +10,13 @@ const ItemSearch = (searchQuery: string) => {
 
   const fuse = new Fuse(items, options);
 
-  return fuse
-    .search(searchQuery)
-    // @ts-ignore
-    .filter((item) => item.score < 0.3)
-    .map((itemObj) => itemObj.item);
+  return (
+    fuse
+      .search(searchQuery)
+      // @ts-ignore
+      .filter((item) => item.score < 0.3)
+      .map((itemObj) => itemObj.item)
+  );
 };
 
 export default ItemSearch;

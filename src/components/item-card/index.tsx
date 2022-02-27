@@ -1,5 +1,13 @@
-
-import { ChangeEvent } from "react";
+import {
+  Badge,
+  Text,
+  Center,
+  Flex,
+  Heading,
+  Image,
+  Stack,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import logo from "./placeholder.png";
 
 interface Props {
@@ -10,35 +18,55 @@ interface Props {
   onClick: () => void;
 }
 const ItemCard = (props: Props) => {
-
   return (
-    <div style={{ width: 400, margin: "auto" }} onClick={props.onClick}>
-      <h1>Hi!</h1>
-      {/* <Paper style={{ display: "flex", flexDirection: "row" }} withBorder  padding="md" shadow="sm">
-        <Image src={logo} height={150} width={150} alt="Product" />
-        <Group spacing="xs">
-          <Text weight={500}>{props.name}</Text>
-          <Group position="center" spacing="xs">
-            <Badge color="blue" variant="light">
-              ${props.price}
-            </Badge>
-            <Badge color="green" variant="light">
-              {props.category}
-            </Badge>
-          </Group>
+    <Center py={1} onClick={props.onClick}>
+      <Stack
+        borderWidth="1px"
+        borderRadius="lg"
+        w={{ sm: "80%", md: "540px" }}
+        direction="row"
+        bg={useColorModeValue("white", "gray.900")}
+        padding={4}
+      >
+        <Image boxSize={[100, 120, 200]} src={logo} />
+        <Stack
+          flex={1}
+          flexDirection="column"
+          justifyContent="center"
+          alignItems="left"
+          p={1}
+          pt={2}
+        >
+          <Heading fontSize={"2xl"} fontFamily={"body"} textAlign="left">
+            {props.name}
+          </Heading>
           <Text
-            size="sm"
-            style={{
-              color: secondaryColor,
-              lineHeight: 1.2,
-              textAlign: "left",
-            }}
+            textAlign="left"
+            color={useColorModeValue("gray.700", "gray.400")}
           >
             {props.description}
           </Text>
-        </Group>
-      </Paper> */}
-    </div>
+          <Stack align={"left"} justify={"left"} direction={"row"} mt={6}>
+            <Badge
+              px={2}
+              py={1}
+              bg={useColorModeValue("gray.50", "gray.800")}
+              fontWeight={"400"}
+            >
+              {props.category}
+            </Badge>
+            <Badge
+              px={2}
+              py={1}
+              bg={useColorModeValue("gray.50", "gray.800")}
+              fontWeight={"400"}
+            >
+              ${props.price}
+            </Badge>
+          </Stack>
+        </Stack>
+      </Stack>
+    </Center>
   );
 };
 

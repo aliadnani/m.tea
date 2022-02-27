@@ -1,16 +1,14 @@
-
+import { Center, Stack } from "@chakra-ui/react";
+import { useStore } from "../../store";
 import { ProductSelection } from "./sub/product-selection";
-
+import { TagSelection } from "./sub/tag-selection";
 
 export const OrderForm = () => {
+  const orderItem = useStore((state) => state.order);
   return (
-    // <Container style={{height: "98vh"}}>
-    // <Center style={{margin: "auto"}}>
-    //   <Container style={{ textAlign: "center" }}>
-        <ProductSelection />
-    //     <TagSelection />
-    //   </Container>
-    // </Center>
-    // </Container>
+    <Stack direction="column">
+      <ProductSelection />
+      {orderItem.name && <TagSelection />}
+    </Stack>
   );
 };
