@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Black Sugar Latte",
+    "category": "Milk Tea",
+    "price": 26,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum gravida, mi in aliquam semper"
+  },
+  {
+    "name": "Honey Oolong Tea",
+    "category": "Milk Tea",
+    "price": 26,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum gravida, mi in aliquam semper"
+  },
+  {
+    "name": "4.3 Milk Tea",
+    "category": "Milk Tea",
+    "price": 26,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum gravida, mi in aliquam semper"
+  },
+  {
+    "name": "Taro Milk Tea",
+    "category": "Milk Tea",
+    "price": 26,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum gravida, mi in aliquam semper"
+  },
+  {
+    "name": "Earl Grey Tea",
+    "category": "Milk Tea",
+    "price": 26,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum gravida, mi in aliquam semper"
+  }
+]
