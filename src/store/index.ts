@@ -1,13 +1,10 @@
 import produce from "immer";
 import create from "zustand";
-import { OrderItem } from "../api/interfaces";
+import { Order, OrderItem } from "../api/interfaces";
 
 export interface AppState {
-  order: {
-    name?: string;
-    price?: number;
-    modifiers?: { [modifier: string]: string };
-  };
+  order: Order;
+  orderToCheck?: Order;
   setOrderItem: (orderItem: OrderItem) => void;
   clearOrderItem: () => void;
   setModifers: (modifiers: { [modifier: string]: string }) => void;
@@ -18,6 +15,11 @@ export const useStore = create<AppState>((set) => ({
     name: undefined,
     price: undefined,
     modifiers: undefined,
+  },
+  orderToCheck: {
+    id: "AS124BA9",
+    name: "Black Tea",
+    modifiers: { ice: "12%", sugar: "12%" },
   },
   setOrderItem: (orderItem) =>
     set(

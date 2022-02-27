@@ -31,7 +31,7 @@ export const ProductSelection = () => {
   return (
     <Flex flexDirection="column" align="center">
       <Heading>I want to order a:</Heading>
-      <InputGroup w={{ sm: "80%", md: "540px" }}>
+      <InputGroup w={{ sm: "80%", md: "340px" }}>
         <Input
           style={{ textAlign: "center" }}
           size="lg"
@@ -60,6 +60,7 @@ export const ProductSelection = () => {
       </InputGroup>
       {search && (
         <UnorderedList styleType="none" maxH="60vh" overflowY="auto">
+          <br></br>
           {ItemSearch(search).map((item) => {
             return (
               <ListItem>

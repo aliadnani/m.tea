@@ -21,6 +21,7 @@ const ItemCard = (props: Props) => {
   return (
     <Center py={1} onClick={props.onClick}>
       <Stack
+        cursor="pointer"
         borderWidth="1px"
         borderRadius="lg"
         w={{ sm: "80%", md: "540px" }}

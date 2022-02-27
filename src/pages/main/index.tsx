@@ -15,8 +15,10 @@ export const Main = () => {
   console.log(pathname);
 
   return (
-    <Center h={"100vh"}>
-      <Stack direction="column">
+    // <Center h={"100vh"}>
+      <Stack direction="column" align="center">
+        <br></br>
+        <br></br>
         <Tabs
           index={pathname === "/order-item" ? 0 : 1}
           w={[250, null, 400, null, null]}
@@ -44,6 +46,6 @@ export const Main = () => {
           <Route path="/" element={<Navigate replace to="/order-item" />} />
         </Routes>
       </Stack>
-    </Center>
+    // </Center>
   );
 };
